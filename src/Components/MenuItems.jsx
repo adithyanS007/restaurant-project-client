@@ -9,7 +9,7 @@ const MenuItems = () => {
     // Fetch items data from the backend based on the selected category
     useEffect(() => {
         if (selectedCategory) {
-            fetch(`http://localhost:5000/api/${selectedCategory.toLowerCase()}`)
+            fetch(`https://restaurant-project-server-eight.vercel.app/api/${selectedCategory.toLowerCase()}`)
                 .then(response => response.json())
                 .then(data => {
                     if (Array.isArray(data)) {
