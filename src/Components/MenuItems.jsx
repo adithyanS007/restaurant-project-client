@@ -9,8 +9,9 @@ const MenuItems = () => {
     // Fetch items data from the backend based on the selected category
     useEffect(() => {
         if (selectedCategory) {
+            const url = `https://restaurant-project-server-eight.vercel.app/api/${selectedCategory.toLowerCase()}`;
             axios
-                .get(`https://restaurant-project-server-eight.vercel.app/api/${selectedCategory.toLowerCase()}`)
+                .get(url)
                 .then(response => {
                     console.log(response.data);
                     if (Array.isArray(response.data)) {
