@@ -12,6 +12,7 @@ const MenuItems = () => {
             axios
                 .get(`https://restaurant-project-server-eight.vercel.app/api/${selectedCategory.toLowerCase()}`)
                 .then(response => {
+                    console.log(response.data);
                     if (Array.isArray(response.data)) {
                         setItems(response.data);
                     } else {
