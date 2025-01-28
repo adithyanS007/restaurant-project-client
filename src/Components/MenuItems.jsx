@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const MenuItems = () => {
     const [selectedCategory, setSelectedCategory] = useState(null); // Track the selected category
@@ -8,13 +9,13 @@ const MenuItems = () => {
     // Fetch items data from the backend based on the selected category
     useEffect(() => {
         if (selectedCategory) {
-            fetch(`https://restaurant-project-server-eight.vercel.app/api/${selectedCategory.toLowerCase()}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (Array.isArray(data)) {
-                        setItems(data);
+            axios
+                .get(`https://restaurant-project-server-eight.vercel.app/api/${selectedCategory.toLowerCase()}`)
+                .then(response => {
+                    if (Array.isArray(response.data)) {
+                        setItems(response.data);
                     } else {
-                        setError(`Expected array, received ${typeof data}`);
+                        setError(`Expected array, received ${typeof response.data}`);
                         setItems([]);
                     }
                 })
