@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 const MenuItems = () => {
     const [selectedCategory, setSelectedCategory] = useState(null); // Track the selected category
