@@ -66,7 +66,7 @@ const MenuItems = () => {
             {/* Display selected category items */}
             {selectedCategory && (
                 <div className="mt-10 px-20 pb-5">
-                    <h2 className="text-2xl text-center mt-10 text-white">{selectedCategory.toUpperCase()} Menu</h2>
+                    <h2 className="text-2xl text-center mt-10 text-white">{selectedCategory.toUpperCase()} MENU</h2>
                     {error && <p className="text-red-500 text-center">{error}</p>} {/* Display error */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-6">
                         {items.length > 0 ? (

@@ -33,18 +33,18 @@ const Navbar = () => {
             </div>
             {isActive && (
                 <div className="md:hidden flex flex-col space-y-4 text-white mt-4">
-                    <a href="" className="hover:text-blue-600 px-4">
+                    <Link to="/" className="hover:text-blue-600 px-4">
                         Home
-                    </a>
-                    <a href="" className="hover:text-blue-600 px-4">
+                    </Link>
+                    <Link to="/menu" className="hover:text-blue-600 px-4">
                         Menu
-                    </a>
-                    <a href="" className="hover:text-blue-600 px-4">
+                    </Link>
+                    <Link to="/services" className="hover:text-blue-600 px-4">
                         Services
-                    </a>
-                    <a href="" className="hover:text-blue-600 px-4">
+                    </Link>
+                    <Link to="/contact" className="hover:text-blue-600 px-4">
                         Contact Us{" "}
-                    </a>
+                    </Link>
                 </div>
             )}
         </nav>
